@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Coastal Tawa — Luxury Indian Dining</title>
+  <!-- Google Fonts Link for Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1.0.3" />
+</head>
+
+<body class="splash-active">
+  <!-- Premium Intro Splash Screen Overlay -->
+  <div id="intro-splash">
+    <script>
+      if (sessionStorage.getItem('splashPlayed')) {
+        document.getElementById('intro-splash').style.display = 'none';
+        document.body.classList.remove('splash-active');
+      }
+    </script>
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="assets/static/new_intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <header class="site-header scroll-up" style="transform: translateY(0)">
+    <div class="brand-wrap">
+      <span class="brand-logo">The Coastal Tawa</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html#hero" class="active">Home</a>
+      <a href="index.html#story">Story</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html#reservation">Reservations</a>
+      <a href="#contact">Contact</a>
+
+      <!-- Interactive Cart Indicator Badge -->
+      <button class="cart-trigger" id="cart-trigger-btn" onclick="toggleCartDrawer(true)">
+        <svg class="cart-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path
+            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+        </svg>
+        <span class="cart-badge" id="cart-badge-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="hero-inner">
+        <div class="hero-content-wrap">
+          <span class="eyebrow">Fine Culinary Artistry</span>
+          <h1 class="premium-title">The Coastal Tawa</h1>
+          <p class="hero-subtitle">
+            An exquisite, sensory-rich journey through contemporary Indian
+            gastronomy, curated with premium ingredients and presented in a
+            majestic visual setting.
+          </p>
+          <div class="hero-actions">
+            <a href="#story" class="button button-primary">Explore Story</a>
+            <a href="#reservation" class="button button-secondary">Reserve Table</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-glow"></div>
+          <div class="logo-stage">
+            <div class="logo-surface">
+              <div class="logo-rotor">
+                <img src="assets/logo-transparent.png?v=3" class="logo-front" alt="The Coastal Tawa Emblem" />
+                <img src="assets/logo-transparent.png?v=3" class="logo-back" alt="The Coastal Tawa Emblem" />
+              </div>
+            </div>
+          </div>
+          <div class="visual-caption">
+            Interactive 3D Sensory Experience — Move your cursor to rotate
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section story-section">
+      <div class="story-panel">
+        <span class="eyebrow">Our Legacy</span>
+        <h2>Modern. Minimal. Premium.</h2>
+        <p>
+          The Coastal Tawa is designed to showcase your restaurant brand with a
+          cinematic visual style, premium dark palette, and luxurious
+          atmosphere. We fuse ancient Coastal spices with contemporary cooking
+          techniques to craft an unforgettable premium experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. SOVEREIGN MENU TEASER -->
+    <section id="menu" class="section menu-section teaser-section">
+      <div class="section-header">
+        <span class="eyebrow">The Coastal Taste Ledger</span>
+        <h2>Premium Gastronomy</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="teaser-container">
+        <div class="teaser-cols">
+          <div class="teaser-block">
+            <span class="teaser-eyebrow">Coastal Combos</span>
+            <h3>Premium Combinations</h3>
+            <p>
+              Experience our curated coastal combos designed for the perfect dining experience, featuring authentic
+              spices from Mangalore to Mumbai.
+            </p>
+            <ul class="teaser-dishes">
+              <li>Manglore To Mumbai Combo 1 <span class="gold-text">₹640</span></li>
+              <li>Basmati Non Veg Combo 2 <span class="gold-text">₹690</span></li>
+              <li>Agri Malwani Special Murg Combo <span class="gold-text">₹750</span></li>
+            </ul>
+          </div>
+
+          <div class="teaser-block royale-teaser-block">
+            <span class="teaser-eyebrow">Seafood & Meats</span>
+            <h3>Coastal Main Course</h3>
+            <p>
+              The crown jewel seafood and meats of our coastal kitchens. An elite collection of authentic Malvani
+              masalas and rich ghee roasts.
+            </p>
+            <ul class="teaser-dishes">
+              <li>Murgh Ghee Roast <span class="gold-text">₹650</span></li>
+              <li>Chicken Malvani Handi <span class="gold-text">₹705</span></li>
+              <li>Mutton Ghee Roast <span class="gold-text">₹735</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="teaser-action">
+          <a href="menu.html" class="button button-primary">View Full Menu & Order</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION SECTION -->
+    <section id="reservation" class="section reservation-section">
+      <div class="section-header">
+        <span class="eyebrow">Reserve your dining experience at The Coastal Tawa.</span>
+        <h2>Reserve Your Table</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="reservation-card">
+        <form class="reservation-form" onsubmit="
+              event.preventDefault();
+              alert(
+                'Your reservation request has been received. Our team will contact you shortly to confirm your booking.',
+              );
+            ">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name">Full Name</label>
+              <input type="text" id="res-name" required placeholder="e.g. Aarav Sharma" />
+            </div>
+            <div class="form-group">
+              <label for="res-phone">Phone Number</label>
+              <input type="tel" id="res-phone" required placeholder="e.g. +91 99202 43728" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Reservation Date</label>
+              <input type="date" id="res-date" required />
+            </div>
+            <div class="form-group">
+              <label for="res-time">Reservation Time</label>
+              <select id="res-time" required>
+                <option value="" disabled selected>Select reservation time</option>
+                <option>12:00 PM - Lunch</option>
+                <option>1:30 PM - Lunch</option>
+                <option>3:00 PM - Lunch</option>
+                <option>7:00 PM - Dinner</option>
+                <option>8:30 PM - Dinner</option>
+                <option>10:00 PM - Dinner</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Number of Guests</label>
+            <select id="res-guests" required>
+              <option value="" disabled selected>Select guest count</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+              <option>6 Guests</option>
+              <option>7 Guests</option>
+              <option>8+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="res-notes">Special Request (Optional)</label>
+            <textarea id="res-notes" rows="3"
+              placeholder="e.g. Birthday Celebration, Anniversary Dinner, High Chair Required, Window Seating, Dietary Requirements..."></textarea>
+          </div>
+          <button type="submit" class="button button-primary submit-btn">
+            Reserve Table
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURIOUS MULTI-COLUMN FOOTER & CONTACT DETAILS -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4 class="brand-logo" style="margin-top: 0; margin-bottom: 1.5rem;">The Coastal Tawa</h4>
+        <p class="footer-about">
+          Dive into a culinary journey of coastal delights.<br>
+          From seafood treasures to continental classics, serving unforgettable dining experiences in Thane.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Opening & Dining</h5>
+        <div class="footer-hours-block">
+          <p style="font-weight: 600; color: #fff; margin-bottom: 0.25rem;">Monday – Sunday</p>
+          <p style="margin-bottom: 0.25rem;">10:30 AM – 12:30 AM</p>
+          <p style="color: var(--accent); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.5rem; font-weight: 600; margin-bottom: 1.2rem;">
+            Open all week.
+          </p>
+        </div>
+        <div class="footer-hours-block">
+          <p style="font-weight: 600; color: #fff; margin-bottom: 0.25rem;">Dining Information</p>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--muted);">
+            Casual Dining & Family Restaurant.<br>Reservations are recommended for dinners and weekend feasts.
+          </p>
+        </div>
+      </div>
+      <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+        <h5>Contact & Location</h5>
+        <a href="https://maps.google.com/?q=Ground+Floor,+Empire+Ways+Co+Operative+Housing+Society,+Junction,+Eastern+Express+Highway,+Near+Nitin+Company,+Sambhaji+Nagar,+Thane+West,+Thane,+Maharashtra+400604"
+          target="_blank" rel="noopener noreferrer" class="footer-address-link" title="Open in Google Maps" style="margin-bottom: 1.2rem;">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          <span class="footer-address-text" style="line-height: 1.6;">
+            Ground Floor, Empire Ways Co Operative Housing Society,<br>
+            Junction, Eastern Express Highway,<br>
+            Near Nitin Company, Sambhaji Nagar,<br>
+            Thane West, Thane,<br>
+            Maharashtra 400604
+          </span>
+        </a>
+        <a href="tel:09920243728" class="footer-contact-link" title="Call Us" style="margin-bottom: 1.2rem;">
+          <svg viewBox="0 0 24 24" width="16" height="16">
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+          <span style="font-weight: 600;">09920243728</span>
+        </a>
+        <a href="https://instagram.com/thecoastaltawa" target="_blank" rel="noopener noreferrer"
+          class="footer-contact-link" title="Follow us on Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+          <span style="font-weight: 600;">@thecoastaltawa</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © 2026 The Coastal Tawa. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE OVERLAYS: CART DRAWER, CHECKOUT MODAL, TRACKER MODAL -->
+
+  <!-- 1. Cart Drawer Sidebar Overlay -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h2>Your Cart</h2>
+      <button class="close-drawer-btn" onclick="toggleCartDrawer(false)">
+        &times;
+      </button>
+    </div>
+    <div class="cart-drawer-content">
+      <div id="cart-items-list" class="cart-items-list">
+        <!-- Dynamically filled by JS -->
+      </div>
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹ 0</span>
+        </div>
+        <div class="summary-row">
+          <span>CGST + SGST (10%)</span>
+          <span id="cart-tax">₹ 0</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total Due</span>
+          <span id="cart-total">₹ 0</span>
+        </div>
+        <button class="button button-primary checkout-btn" id="proceed-checkout-btn" onclick="openCheckoutModal()"
+          disabled>
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="cart-drawer-backdrop" class="drawer-backdrop" onclick="toggleCartDrawer(false)"></div>
+
+  <!-- 2. Checkout & Payment Modal Overlay -->
+  <div id="checkout-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal-btn" onclick="closeCheckoutModal()">
+        &times;
+      </button>
+      <h2>Order Settlement</h2>
+      <div class="gold-divider"></div>
+
+      <div class="modal-body">
+        <div class="checkout-summary-box">
+          <h3>Summary Ledger</h3>
+          <div class="summary-row">
+            <span>Delicacies Count</span>
+            <span id="checkout-count">0 Items</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Amount Due</span>
+            <span id="checkout-total-price">₹ 0</span>
+          </div>
+        </div>
+
+        <form id="payment-form" class="payment-form" onsubmit="processPayment(event)">
+          <div class="payment-methods">
+            <button type="button" class="payment-method-btn active" id="pay-method-card"
+              onclick="togglePaymentFields('card')">
+              Premium Credit Card
+            </button>
+            <button type="button" class="payment-method-btn" id="pay-method-upi" onclick="togglePaymentFields('upi')">
+              UPI Payment
+            </button>
+          </div>
+
+          <div id="card-fields" class="form-fields-group">
+            <div class="form-group">
+              <label for="card-num">Card Number</label>
+              <input type="text" id="card-num" placeholder="4111 2222 3333 4444" pattern="\d{16}" minlength="16"
+                maxlength="16" title="16-digit card number" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="card-expiry">Expiry Date</label>
+                <input type="text" id="card-expiry" placeholder="MM/YY" pattern="\d{2}/\d{2}" minlength="5"
+                  maxlength="5" title="MM/YY format" required />
+              </div>
+              <div class="form-group">
+                <label for="card-cvv">CVV</label>
+                <input type="password" id="card-cvv" placeholder="***" pattern="\d{3}" minlength="3" maxlength="3"
+                  title="3-digit security CVV" required />
+              </div>
+            </div>
+          </div>
+
+          <div id="upi-fields" class="form-fields-group hidden">
+            <div class="form-group">
+              <label for="upi-id">UPI Address</label>
+              <input type="text" id="upi-id" placeholder="username@upi" />
+            </div>
+          </div>
+
+          <button type="submit" class="button button-primary submit-btn" id="pay-now-btn">
+            Complete Order Settlement
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="checkout-modal-backdrop" class="modal-backdrop" onclick="closeCheckoutModal()"></div>
+
+  <!-- 3. Live Order Tracking Modal Overlay -->
+  <div id="tracking-modal" class="modal">
+    <div class="modal-content tracking-content">
+      <button class="close-modal-btn" onclick="closeTrackingModal()">
+        &times;
+      </button>
+      <h2>Delivery Tracker</h2>
+      <div class="gold-divider"></div>
+
+      <div class="tracking-body">
+        <div class="tracking-status-badge">
+          <span id="tracking-status-text">Your order is being anchored in the premium ledgers...</span>
+        </div>
+
+        <div class="timer-box">
+          <div class="timer-title">Estimated Feast Arrival</div>
+          <div class="timer-countdown" id="tracking-timer">25:00</div>
+        </div>
+
+        <div class="stepper">
+          <div class="step active" id="step-1">
+            <div class="step-num">✓</div>
+            <div class="step-label">Order Anchored</div>
+          </div>
+          <div class="step" id="step-2">
+            <div class="step-num">2</div>
+            <div class="step-label">Premium Kitchen Preparation</div>
+          </div>
+          <div class="step" id="step-3">
+            <div class="step-num">3</div>
+            <div class="step-label">Delivery Partner Dispatch</div>
+          </div>
+          <div class="step" id="step-4">
+            <div class="step-num">4</div>
+            <div class="step-label">Arrived at Your Palace</div>
+          </div>
+        </div>
+
+        <button class="button button-secondary" onclick="closeTrackingModal()" style="margin-top: 2rem; width: 100%">
+          Acknowledge & Close
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="tracking-modal-backdrop" class="modal-backdrop" onclick="closeTrackingModal()"></div>
+
+  <script src="script.js?v=1.0.3"></script>
+</body>
+
+</html>

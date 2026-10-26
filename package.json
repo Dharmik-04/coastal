@@ -1,0 +1,16 @@
+{
+  "name": "thecoastaltawa",
+  "version": "1.0.0",
+  "description": "The Coastal Tawa - Luxury Indian Dining",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server \"restro (1)/restro\" -p 8000 -c-1 -o",
+    "start": "npx http-server \"restro (1)/restro\" -p 8000 -c-1 -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

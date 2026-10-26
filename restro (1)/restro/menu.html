@@ -1,0 +1,2758 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Coastal Tawa — The Premium Menu Ledger</title>
+    <!-- Google Fonts Link for Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=1.0.2" />
+  </head>
+  <body class="menu-page-body">
+    <!-- Synced Luxury Header Nav -->
+    <header class="site-header scroll-up" style="transform: translateY(0)">
+      <div class="brand-wrap">
+        <span class="brand-logo">The Coastal Tawa</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#story">Story</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="index.html#reservation">Reservations</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Interactive Cart Indicator Badge -->
+        <button
+          class="cart-trigger"
+          id="cart-trigger-btn"
+          onclick="toggleCartDrawer(true)"
+        >
+          <svg
+            class="cart-icon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="currentColor"
+          >
+            <path
+              d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+            />
+          </svg>
+          <span class="cart-badge" id="cart-badge-count">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="menu-page-container">
+      <div class="text-center" style="margin-bottom: 3.5rem">
+        <span class="eyebrow">Coastal Flavours • Fine Dining • Malvani Specialities</span>
+        <h1
+          class="premium-title"
+          style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin: 1rem 0"
+        >
+          Our Premium Menu
+        </h1>
+        <div class="gold-divider"></div>
+      </div>
+
+            <!-- Premium Luxury Category Switcher Pill -->
+<div class='menu-tabs-container' style='flex-wrap: wrap; gap: 10px; max-width: 1000px; margin-bottom: 3rem; justify-content: center; display: flex;'>
+  <button class='menu-tab-btn active' onclick='filterMenu("all", this)'>All Delicacies</button>
+  <button class='menu-tab-btn' onclick='filterMenu("combos", this)'>COMBOS</button>
+  <button class='menu-tab-btn' onclick='filterMenu("soups", this)'>SOUPS</button>
+  <button class='menu-tab-btn' onclick='filterMenu("veg-starters", this)'>VEG STARTERS</button>
+  <button class='menu-tab-btn' onclick='filterMenu("non-veg-starters", this)'>NON-VEG STARTERS</button>
+  <button class='menu-tab-btn' onclick='filterMenu("main-course-veg", this)'>MAIN COURSE VEG</button>
+  <button class='menu-tab-btn' onclick='filterMenu("main-course-non-veg", this)'>MAIN COURSE NON-VEG</button>
+  <button class='menu-tab-btn' onclick='filterMenu("breads", this)'>BREADS</button>
+  <button class='menu-tab-btn' onclick='filterMenu("rice", this)'>RICE</button>
+  <button class='menu-tab-btn' onclick='filterMenu("biryani", this)'>BIRYANI</button>
+  <button class='menu-tab-btn' onclick='filterMenu("snacks", this)'>SNACKS</button>
+
+  <button class='menu-tab-btn' onclick='filterMenu("veg-fried-rice", this)'>VEG FRIED RICE</button>
+  <button class='menu-tab-btn' onclick='filterMenu("veg-noodles", this)'>VEG NOODLES</button>
+  <button class='menu-tab-btn' onclick='filterMenu("non-veg-fried-rice", this)'>NON-VEG FRIED RICE</button>
+  <button class='menu-tab-btn' onclick='filterMenu("non-veg-noodles", this)'>NON-VEG NOODLES</button>
+</div>
+<!-- COMBOS -->
+<div id='combos-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>COMBOS</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Basmati Ke Khet Se Combo 1</h3>
+        <span class='price'>₹460</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Basmati Ke Khet Se Combo 1", -1)'>-</button>
+          <span id='menu-qty-Basmati Ke Khet Se Combo 1'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Basmati Ke Khet Se Combo 1", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Basmati Ke Khet Se Combo 1", 460)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Manglore To Mumbai Combo 1</h3>
+        <span class='price'>₹640</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Manglore To Mumbai Combo 1", -1)'>-</button>
+          <span id='menu-qty-Manglore To Mumbai Combo 1'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Manglore To Mumbai Combo 1", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Manglore To Mumbai Combo 1", 640)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Veg Chinese Rice Combo</h3>
+        <span class='price'>₹495</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Chinese Rice Combo", -1)'>-</button>
+          <span id='menu-qty-Veg Chinese Rice Combo'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Chinese Rice Combo", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Chinese Rice Combo", 495)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Veg Chinese Noodles Combo</h3>
+        <span class='price'>₹495</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Chinese Noodles Combo", -1)'>-</button>
+          <span id='menu-qty-Veg Chinese Noodles Combo'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Chinese Noodles Combo", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Chinese Noodles Combo", 495)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Chicken Main Course Combo 1</h3>
+        <span class='price'>₹670</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Main Course Combo 1", -1)'>-</button>
+          <span id='menu-qty-Chicken Main Course Combo 1'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Main Course Combo 1", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Main Course Combo 1", 670)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Chicken Main Course Combo 2</h3>
+        <span class='price'>₹670</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Main Course Combo 2", -1)'>-</button>
+          <span id='menu-qty-Chicken Main Course Combo 2'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Main Course Combo 2", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Main Course Combo 2", 670)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Non Veg Noodles Combo</h3>
+        <span class='price'>₹575</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Non Veg Noodles Combo", -1)'>-</button>
+          <span id='menu-qty-Non Veg Noodles Combo'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Non Veg Noodles Combo", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Non Veg Noodles Combo", 575)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Nonveg Rice Combo</h3>
+        <span class='price'>₹575</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Nonveg Rice Combo", -1)'>-</button>
+          <span id='menu-qty-Nonveg Rice Combo'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Nonveg Rice Combo", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Nonveg Rice Combo", 575)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Basmati Non Veg Combo 1</h3>
+        <span class='price'>₹590</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Basmati Non Veg Combo 1", -1)'>-</button>
+          <span id='menu-qty-Basmati Non Veg Combo 1'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Basmati Non Veg Combo 1", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Basmati Non Veg Combo 1", 590)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Basmati Non Veg Combo 2</h3>
+        <span class='price'>₹690</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Basmati Non Veg Combo 2", -1)'>-</button>
+          <span id='menu-qty-Basmati Non Veg Combo 2'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Basmati Non Veg Combo 2", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Basmati Non Veg Combo 2", 690)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Agri Malwani Special Murg Combo</h3>
+        <span class='price'>₹750</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Agri Malwani Special Murg Combo", -1)'>-</button>
+          <span id='menu-qty-Agri Malwani Special Murg Combo'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Agri Malwani Special Murg Combo", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Agri Malwani Special Murg Combo", 750)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Mutton Combo</h3>
+        <span class='price'>₹750</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Combo", -1)'>-</button>
+          <span id='menu-qty-Mutton Combo'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Combo", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Combo", 750)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='combos'>
+      <div class='menu-card-header'>
+        <h3>Manglore To Mumbai Combo 3</h3>
+        <span class='price'>₹800</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Manglore To Mumbai Combo 3", -1)'>-</button>
+          <span id='menu-qty-Manglore To Mumbai Combo 3'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Manglore To Mumbai Combo 3", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Manglore To Mumbai Combo 3", 800)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- SOUPS -->
+<div id='soups-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>SOUPS</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Cream Of Tomato Soup</h3>
+        <span class='price'>₹265</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Cream Of Tomato Soup", -1)'>-</button>
+          <span id='menu-qty-Cream Of Tomato Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Cream Of Tomato Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Cream Of Tomato Soup", 265)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Cream Of Mushroom Soup</h3>
+        <span class='price'>₹265</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Cream Of Mushroom Soup", -1)'>-</button>
+          <span id='menu-qty-Cream Of Mushroom Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Cream Of Mushroom Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Cream Of Mushroom Soup", 265)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Veg Manchow Soup</h3>
+        <span class='price'>₹265</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Manchow Soup", -1)'>-</button>
+          <span id='menu-qty-Veg Manchow Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Manchow Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Manchow Soup", 265)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Veg Hot N Sour Soup</h3>
+        <span class='price'>₹265</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Hot N Sour Soup", -1)'>-</button>
+          <span id='menu-qty-Veg Hot N Sour Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Hot N Sour Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Hot N Sour Soup", 265)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Veg Clear Soup</h3>
+        <span class='price'>₹265</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Clear Soup", -1)'>-</button>
+          <span id='menu-qty-Veg Clear Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Clear Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Clear Soup", 265)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Chicken Manchow Soup</h3>
+        <span class='price'>₹299</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Manchow Soup", -1)'>-</button>
+          <span id='menu-qty-Chicken Manchow Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Manchow Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Manchow Soup", 299)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Chicken Hot N Sour Soup</h3>
+        <span class='price'>₹299</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Hot N Sour Soup", -1)'>-</button>
+          <span id='menu-qty-Chicken Hot N Sour Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Hot N Sour Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Hot N Sour Soup", 299)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='soups'>
+      <div class='menu-card-header'>
+        <h3>Chicken Clear Soup</h3>
+        <span class='price'>₹250</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Clear Soup", -1)'>-</button>
+          <span id='menu-qty-Chicken Clear Soup'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Clear Soup", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Clear Soup", 250)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- VEG STARTERS -->
+<div id='veg-starters-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>VEG STARTERS</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Paneer Tikka</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Tikka", -1)'>-</button>
+          <span id='menu-qty-Paneer Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Tikka", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Paneer Pahadi Tikka</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Pahadi Tikka", -1)'>-</button>
+          <span id='menu-qty-Paneer Pahadi Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Pahadi Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Pahadi Tikka", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Paneer Banjara Tikka</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Banjara Tikka", -1)'>-</button>
+          <span id='menu-qty-Paneer Banjara Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Banjara Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Banjara Tikka", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Tandoori Mushroom</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Tandoori Mushroom", -1)'>-</button>
+          <span id='menu-qty-Tandoori Mushroom'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Tandoori Mushroom", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Tandoori Mushroom", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Paneer Sholey Tikka</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Sholey Tikka", -1)'>-</button>
+          <span id='menu-qty-Paneer Sholey Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Sholey Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Sholey Tikka", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Paneer Malai Tikka</h3>
+        <span class='price'>₹485</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Malai Tikka", -1)'>-</button>
+          <span id='menu-qty-Paneer Malai Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Malai Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Malai Tikka", 485)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Veg Seekh Kebab</h3>
+        <span class='price'>₹320</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Seekh Kebab", -1)'>-</button>
+          <span id='menu-qty-Veg Seekh Kebab'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Seekh Kebab", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Seekh Kebab", 320)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Paneer Koliwada</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Koliwada", -1)'>-</button>
+          <span id='menu-qty-Paneer Koliwada'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Koliwada", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Koliwada", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- NON-VEG STARTERS -->
+<div id='non-veg-starters-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>NON-VEG STARTERS</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Murgh Tikka</h3>
+        <span class='price'>₹515</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Tikka", -1)'>-</button>
+          <span id='menu-qty-Murgh Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Tikka", 515)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Murgh Banjara Kebab</h3>
+        <span class='price'>₹515</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Banjara Kebab", -1)'>-</button>
+          <span id='menu-qty-Murgh Banjara Kebab'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Banjara Kebab", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Banjara Kebab", 515)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Murgh Pahadi Tikka</h3>
+        <span class='price'>₹515</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Pahadi Tikka", -1)'>-</button>
+          <span id='menu-qty-Murgh Pahadi Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Pahadi Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Pahadi Tikka", 515)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Murgh Malai Tikka</h3>
+        <span class='price'>₹515</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Malai Tikka", -1)'>-</button>
+          <span id='menu-qty-Murgh Malai Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Malai Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Malai Tikka", 515)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Murgh Kalimiri Tikka</h3>
+        <span class='price'>₹515</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Kalimiri Tikka", -1)'>-</button>
+          <span id='menu-qty-Murgh Kalimiri Tikka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Kalimiri Tikka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Kalimiri Tikka", 515)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Murgh Tandoori</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Tandoori", -1)'>-</button>
+          <span id='menu-qty-Murgh Tandoori'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Tandoori", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Tandoori", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Murgh Seekh Kebab</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Seekh Kebab", -1)'>-</button>
+          <span id='menu-qty-Murgh Seekh Kebab'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Seekh Kebab", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Seekh Kebab", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-starters'>
+      <div class='menu-card-header'>
+        <h3>Mutton Seekh Kebab</h3>
+        <span class='price'>₹615</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Seekh Kebab", -1)'>-</button>
+          <span id='menu-qty-Mutton Seekh Kebab'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Seekh Kebab", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Seekh Kebab", 615)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MAIN COURSE VEG -->
+<div id='main-course-veg-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>MAIN COURSE VEG</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Dal Fry</h3>
+        <span class='price'>₹365</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Dal Fry", -1)'>-</button>
+          <span id='menu-qty-Dal Fry'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Dal Fry", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Dal Fry", 365)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Dal Tadka</h3>
+        <span class='price'>₹375</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Dal Tadka", -1)'>-</button>
+          <span id='menu-qty-Dal Tadka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Dal Tadka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Dal Tadka", 375)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Dal Spinach</h3>
+        <span class='price'>₹365</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Dal Spinach", -1)'>-</button>
+          <span id='menu-qty-Dal Spinach'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Dal Spinach", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Dal Spinach", 365)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Veg Lajawab</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Lajawab", -1)'>-</button>
+          <span id='menu-qty-Veg Lajawab'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Lajawab", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Lajawab", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Veg Lababdar</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Lababdar", -1)'>-</button>
+          <span id='menu-qty-Veg Lababdar'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Lababdar", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Lababdar", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Veg Handi</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Handi", -1)'>-</button>
+          <span id='menu-qty-Veg Handi'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Handi", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Handi", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Veg Kolhapuri</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Kolhapuri", -1)'>-</button>
+          <span id='menu-qty-Veg Kolhapuri'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Kolhapuri", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Kolhapuri", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Veg Kofta</h3>
+        <span class='price'>₹415</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Kofta", -1)'>-</button>
+          <span id='menu-qty-Veg Kofta'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Kofta", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Kofta", 415)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Veg Malai Kofta</h3>
+        <span class='price'>₹450</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Malai Kofta", -1)'>-</button>
+          <span id='menu-qty-Veg Malai Kofta'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Malai Kofta", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Malai Kofta", 450)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Paneer Lajawab</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Lajawab", -1)'>-</button>
+          <span id='menu-qty-Paneer Lajawab'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Lajawab", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Lajawab", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Paneer Lababdar</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Lababdar", -1)'>-</button>
+          <span id='menu-qty-Paneer Lababdar'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Lababdar", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Lababdar", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Paneer Do Pyaaza</h3>
+        <span class='price'>₹415</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Do Pyaaza", -1)'>-</button>
+          <span id='menu-qty-Paneer Do Pyaaza'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Do Pyaaza", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Do Pyaaza", 415)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Paneer Kaju Masala</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Kaju Masala", -1)'>-</button>
+          <span id='menu-qty-Paneer Kaju Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Kaju Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Kaju Masala", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Kaju Masala</h3>
+        <span class='price'>₹495</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Kaju Masala", -1)'>-</button>
+          <span id='menu-qty-Kaju Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Kaju Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Kaju Masala", 495)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Mushroom Masala</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mushroom Masala", -1)'>-</button>
+          <span id='menu-qty-Mushroom Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mushroom Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mushroom Masala", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Paneer Tikka Masala</h3>
+        <span class='price'>₹365</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Tikka Masala", -1)'>-</button>
+          <span id='menu-qty-Paneer Tikka Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Tikka Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Tikka Masala", 365)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Paneer Ghee Roast</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Ghee Roast", -1)'>-</button>
+          <span id='menu-qty-Paneer Ghee Roast'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Ghee Roast", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Ghee Roast", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-veg'>
+      <div class='menu-card-header'>
+        <h3>Mushroom Ghee Roast</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mushroom Ghee Roast", -1)'>-</button>
+          <span id='menu-qty-Mushroom Ghee Roast'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mushroom Ghee Roast", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mushroom Ghee Roast", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MAIN COURSE NON-VEG -->
+<div id='main-course-non-veg-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>MAIN COURSE NON-VEG</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Butter Chicken</h3>
+        <span class='price'>₹530</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Butter Chicken", -1)'>-</button>
+          <span id='menu-qty-Butter Chicken'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Butter Chicken", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Butter Chicken", 530)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Handi</h3>
+        <span class='price'>₹750</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Handi", -1)'>-</button>
+          <span id='menu-qty-Murgh Handi'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Handi", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Handi", 750)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Ghee Roast</h3>
+        <span class='price'>₹650</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Ghee Roast", -1)'>-</button>
+          <span id='menu-qty-Murgh Ghee Roast'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Ghee Roast", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Ghee Roast", 650)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Malvani Masala</h3>
+        <span class='price'>₹530</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Malvani Masala", -1)'>-</button>
+          <span id='menu-qty-Murgh Malvani Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Malvani Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Malvani Masala", 530)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Lapeta</h3>
+        <span class='price'>₹750</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Lapeta", -1)'>-</button>
+          <span id='menu-qty-Murgh Lapeta'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Lapeta", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Lapeta", 750)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Chicken Malvani Handi</h3>
+        <span class='price'>₹705</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Malvani Handi", -1)'>-</button>
+          <span id='menu-qty-Chicken Malvani Handi'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Malvani Handi", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Malvani Handi", 705)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Masala</h3>
+        <span class='price'>₹450</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Masala", -1)'>-</button>
+          <span id='menu-qty-Murgh Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Masala", 450)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Kolhapuri</h3>
+        <span class='price'>₹450</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Kolhapuri", -1)'>-</button>
+          <span id='menu-qty-Murgh Kolhapuri'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Kolhapuri", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Kolhapuri", 450)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Rara Masala</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Rara Masala", -1)'>-</button>
+          <span id='menu-qty-Murgh Rara Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Rara Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Rara Masala", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Do Pyaaza</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Do Pyaaza", -1)'>-</button>
+          <span id='menu-qty-Murgh Do Pyaaza'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Do Pyaaza", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Do Pyaaza", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Lababdar</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Lababdar", -1)'>-</button>
+          <span id='menu-qty-Murgh Lababdar'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Lababdar", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Lababdar", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Tikka Masala</h3>
+        <span class='price'>₹560</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Tikka Masala", -1)'>-</button>
+          <span id='menu-qty-Murgh Tikka Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Tikka Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Tikka Masala", 560)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Musallam</h3>
+        <span class='price'>₹690</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Musallam", -1)'>-</button>
+          <span id='menu-qty-Murgh Musallam'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Musallam", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Musallam", 690)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Lahori Spinach Gravy</h3>
+        <span class='price'>₹460</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Lahori Spinach Gravy", -1)'>-</button>
+          <span id='menu-qty-Murgh Lahori Spinach Gravy'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Lahori Spinach Gravy", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Lahori Spinach Gravy", 460)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Chatpata</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Chatpata", -1)'>-</button>
+          <span id='menu-qty-Murgh Chatpata'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Chatpata", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Chatpata", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Murgh Patiala</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Murgh Patiala", -1)'>-</button>
+          <span id='menu-qty-Murgh Patiala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Murgh Patiala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Murgh Patiala", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Chicken Rogan Josh</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Rogan Josh", -1)'>-</button>
+          <span id='menu-qty-Chicken Rogan Josh'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Rogan Josh", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Rogan Josh", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Mutton Lapeta</h3>
+        <span class='price'>₹790</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Lapeta", -1)'>-</button>
+          <span id='menu-qty-Mutton Lapeta'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Lapeta", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Lapeta", 790)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Mutton Ghee Roast</h3>
+        <span class='price'>₹735</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Ghee Roast", -1)'>-</button>
+          <span id='menu-qty-Mutton Ghee Roast'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Ghee Roast", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Ghee Roast", 735)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Mutton Rara Masala</h3>
+        <span class='price'>₹695</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Rara Masala", -1)'>-</button>
+          <span id='menu-qty-Mutton Rara Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Rara Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Rara Masala", 695)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Mutton Rogan Josh</h3>
+        <span class='price'>₹695</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Rogan Josh", -1)'>-</button>
+          <span id='menu-qty-Mutton Rogan Josh'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Rogan Josh", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Rogan Josh", 695)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Mutton Masala</h3>
+        <span class='price'>₹650</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Masala", -1)'>-</button>
+          <span id='menu-qty-Mutton Masala'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Masala", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Masala", 650)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Egg Bhurji</h3>
+        <span class='price'>₹465</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Egg Bhurji", -1)'>-</button>
+          <span id='menu-qty-Egg Bhurji'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Egg Bhurji", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Egg Bhurji", 465)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='main-course-non-veg'>
+      <div class='menu-card-header'>
+        <h3>Egg Bhurji</h3>
+        <span class='price'>₹465</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Egg Bhurji", -1)'>-</button>
+          <span id='menu-qty-Egg Bhurji'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Egg Bhurji", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Egg Bhurji", 465)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BREADS -->
+<div id='breads-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>BREADS</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Roti</h3>
+        <span class='price'>₹40</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Roti", -1)'>-</button>
+          <span id='menu-qty-Roti'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Roti", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Roti", 40)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Butter Roti</h3>
+        <span class='price'>₹50</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Butter Roti", -1)'>-</button>
+          <span id='menu-qty-Butter Roti'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Butter Roti", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Butter Roti", 50)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Naan</h3>
+        <span class='price'>₹70</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Naan", -1)'>-</button>
+          <span id='menu-qty-Naan'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Naan", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Naan", 70)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Butter Naan</h3>
+        <span class='price'>₹80</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Butter Naan", -1)'>-</button>
+          <span id='menu-qty-Butter Naan'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Butter Naan", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Butter Naan", 80)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Plain Kulcha</h3>
+        <span class='price'>₹80</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Plain Kulcha", -1)'>-</button>
+          <span id='menu-qty-Plain Kulcha'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Plain Kulcha", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Plain Kulcha", 80)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Butter Kulcha</h3>
+        <span class='price'>₹90</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Butter Kulcha", -1)'>-</button>
+          <span id='menu-qty-Butter Kulcha'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Butter Kulcha", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Butter Kulcha", 90)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Butter Garlic Naan</h3>
+        <span class='price'>₹170</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Butter Garlic Naan", -1)'>-</button>
+          <span id='menu-qty-Butter Garlic Naan'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Butter Garlic Naan", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Butter Garlic Naan", 170)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Cheese Naan</h3>
+        <span class='price'>₹190</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Cheese Naan", -1)'>-</button>
+          <span id='menu-qty-Cheese Naan'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Cheese Naan", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Cheese Naan", 190)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Cheese Garlic Naan</h3>
+        <span class='price'>₹220</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Cheese Garlic Naan", -1)'>-</button>
+          <span id='menu-qty-Cheese Garlic Naan'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Cheese Garlic Naan", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Cheese Garlic Naan", 220)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Garlic Naan</h3>
+        <span class='price'>₹160</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Garlic Naan", -1)'>-</button>
+          <span id='menu-qty-Garlic Naan'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Garlic Naan", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Garlic Naan", 160)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Laccha Paratha</h3>
+        <span class='price'>₹90</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Laccha Paratha", -1)'>-</button>
+          <span id='menu-qty-Laccha Paratha'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Laccha Paratha", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Laccha Paratha", 90)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='breads'>
+      <div class='menu-card-header'>
+        <h3>Butter Laccha Paratha</h3>
+        <span class='price'>₹99</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Butter Laccha Paratha", -1)'>-</button>
+          <span id='menu-qty-Butter Laccha Paratha'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Butter Laccha Paratha", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Butter Laccha Paratha", 99)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- RICE -->
+<div id='rice-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>RICE</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='rice'>
+      <div class='menu-card-header'>
+        <h3>Steamed Rice</h3>
+        <span class='price'>₹255</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Steamed Rice", -1)'>-</button>
+          <span id='menu-qty-Steamed Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Steamed Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Steamed Rice", 255)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='rice'>
+      <div class='menu-card-header'>
+        <h3>Jeera Rice</h3>
+        <span class='price'>₹320</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Jeera Rice", -1)'>-</button>
+          <span id='menu-qty-Jeera Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Jeera Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Jeera Rice", 320)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='rice'>
+      <div class='menu-card-header'>
+        <h3>Dal Khichdi</h3>
+        <span class='price'>₹320</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Dal Khichdi", -1)'>-</button>
+          <span id='menu-qty-Dal Khichdi'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Dal Khichdi", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Dal Khichdi", 320)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='rice'>
+      <div class='menu-card-header'>
+        <h3>Veg Pulao</h3>
+        <span class='price'>₹415</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Pulao", -1)'>-</button>
+          <span id='menu-qty-Veg Pulao'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Pulao", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Pulao", 415)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='rice'>
+      <div class='menu-card-header'>
+        <h3>Dal Khichdi Tadka</h3>
+        <span class='price'>₹320</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Dal Khichdi Tadka", -1)'>-</button>
+          <span id='menu-qty-Dal Khichdi Tadka'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Dal Khichdi Tadka", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Dal Khichdi Tadka", 320)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BIRYANI -->
+<div id='biryani-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>BIRYANI</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Veg Biryani</h3>
+        <span class='price'>₹450</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Biryani", -1)'>-</button>
+          <span id='menu-qty-Veg Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Biryani", 450)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Veg Dum Biryani</h3>
+        <span class='price'>₹485</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Dum Biryani", -1)'>-</button>
+          <span id='menu-qty-Veg Dum Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Dum Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Dum Biryani", 485)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Paneer Biryani</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Biryani", -1)'>-</button>
+          <span id='menu-qty-Paneer Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Biryani", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Paneer Tikka Biryani</h3>
+        <span class='price'>₹515</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Paneer Tikka Biryani", -1)'>-</button>
+          <span id='menu-qty-Paneer Tikka Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Paneer Tikka Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Paneer Tikka Biryani", 515)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Egg Biryani</h3>
+        <span class='price'>₹395</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Egg Biryani", -1)'>-</button>
+          <span id='menu-qty-Egg Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Egg Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Egg Biryani", 395)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Chicken Biryani</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Biryani", -1)'>-</button>
+          <span id='menu-qty-Chicken Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Biryani", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Chicken Dum Biryani</h3>
+        <span class='price'>₹530</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Dum Biryani", -1)'>-</button>
+          <span id='menu-qty-Chicken Dum Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Dum Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Dum Biryani", 530)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Chicken Tikka Biryani</h3>
+        <span class='price'>₹540</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Tikka Biryani", -1)'>-</button>
+          <span id='menu-qty-Chicken Tikka Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Tikka Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Tikka Biryani", 540)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Mutton Biryani Boneless</h3>
+        <span class='price'>₹640</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Biryani Boneless", -1)'>-</button>
+          <span id='menu-qty-Mutton Biryani Boneless'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Biryani Boneless", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Biryani Boneless", 640)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Mutton Biryani</h3>
+        <span class='price'>₹640</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Biryani", -1)'>-</button>
+          <span id='menu-qty-Mutton Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Biryani", 640)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Mutton Dum Biryani</h3>
+        <span class='price'>₹650</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mutton Dum Biryani", -1)'>-</button>
+          <span id='menu-qty-Mutton Dum Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mutton Dum Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mutton Dum Biryani", 650)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='biryani'>
+      <div class='menu-card-header'>
+        <h3>Prawns Biryani</h3>
+        <span class='price'>₹655</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Prawns Biryani", -1)'>-</button>
+          <span id='menu-qty-Prawns Biryani'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Prawns Biryani", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Prawns Biryani", 655)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- SNACKS -->
+<div id='snacks-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>SNACKS</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>Chana Garlic Fry</h3>
+        <span class='price'>₹230</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chana Garlic Fry", -1)'>-</button>
+          <span id='menu-qty-Chana Garlic Fry'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chana Garlic Fry", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chana Garlic Fry", 230)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>Chana Garlic Koliwada</h3>
+        <span class='price'>₹275</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chana Garlic Koliwada", -1)'>-</button>
+          <span id='menu-qty-Chana Garlic Koliwada'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chana Garlic Koliwada", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chana Garlic Koliwada", 275)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>French Fries</h3>
+        <span class='price'>₹199</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("French Fries", -1)'>-</button>
+          <span id='menu-qty-French Fries'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("French Fries", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("French Fries", 199)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>Peri Peri French Fries</h3>
+        <span class='price'>₹240</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Peri Peri French Fries", -1)'>-</button>
+          <span id='menu-qty-Peri Peri French Fries'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Peri Peri French Fries", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Peri Peri French Fries", 240)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>Corn Tikki</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Corn Tikki", -1)'>-</button>
+          <span id='menu-qty-Corn Tikki'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Corn Tikki", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Corn Tikki", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>Cheese Corn Balls</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Cheese Corn Balls", -1)'>-</button>
+          <span id='menu-qty-Cheese Corn Balls'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Cheese Corn Balls", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Cheese Corn Balls", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>Crispy Corn</h3>
+        <span class='price'>₹310</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Crispy Corn", -1)'>-</button>
+          <span id='menu-qty-Crispy Corn'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Crispy Corn", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Crispy Corn", 310)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='snacks'>
+      <div class='menu-card-header'>
+        <h3>Rawas Fish Fingers</h3>
+        <span class='price'>₹605</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Rawas Fish Fingers", -1)'>-</button>
+          <span id='menu-qty-Rawas Fish Fingers'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Rawas Fish Fingers", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Rawas Fish Fingers", 605)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- VEG FRIED RICE -->
+<div id='veg-fried-rice-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>VEG FRIED RICE</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Veg Fried Rice</h3>
+        <span class='price'>₹395</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Veg Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Fried Rice", 395)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Veg Schezwan Fried Rice</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Schezwan Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Veg Schezwan Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Schezwan Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Schezwan Fried Rice", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Veg Hong Kong Fried Rice</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Hong Kong Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Veg Hong Kong Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Hong Kong Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Hong Kong Fried Rice", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Veg Triple Schezwan Fried Rice</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Triple Schezwan Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Veg Triple Schezwan Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Triple Schezwan Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Triple Schezwan Fried Rice", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Veg Thai Red Fried Rice</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Thai Red Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Veg Thai Red Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Thai Red Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Thai Red Fried Rice", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Veg Thai Green Fried Rice</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Thai Green Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Veg Thai Green Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Thai Green Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Thai Green Fried Rice", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- VEG NOODLES -->
+<div id='veg-noodles-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>VEG NOODLES</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Veg Hakka Noodles</h3>
+        <span class='price'>₹395</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Hakka Noodles", -1)'>-</button>
+          <span id='menu-qty-Veg Hakka Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Hakka Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Hakka Noodles", 395)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Veg Schezwan Noodles</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Schezwan Noodles", -1)'>-</button>
+          <span id='menu-qty-Veg Schezwan Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Schezwan Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Schezwan Noodles", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Veg Hong Kong Noodles</h3>
+        <span class='price'>₹430</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Hong Kong Noodles", -1)'>-</button>
+          <span id='menu-qty-Veg Hong Kong Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Hong Kong Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Hong Kong Noodles", 430)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Veg Triple Schezwan Fried Noodles</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Triple Schezwan Fried Noodles", -1)'>-</button>
+          <span id='menu-qty-Veg Triple Schezwan Fried Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Triple Schezwan Fried Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Triple Schezwan Fried Noodles", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Veg Thai Red Noodles</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Thai Red Noodles", -1)'>-</button>
+          <span id='menu-qty-Veg Thai Red Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Thai Red Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Thai Red Noodles", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Veg Thai Green Noodles</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Veg Thai Green Noodles", -1)'>-</button>
+          <span id='menu-qty-Veg Thai Green Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Veg Thai Green Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Veg Thai Green Noodles", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- NON-VEG FRIED RICE -->
+<div id='non-veg-fried-rice-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>NON-VEG FRIED RICE</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Egg Fried Rice</h3>
+        <span class='price'>₹341</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Egg Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Egg Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Egg Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Egg Fried Rice", 341)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Chicken Fried Rice</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Chicken Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Fried Rice", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Chicken Schezwan Fried Rice</h3>
+        <span class='price'>₹485</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Schezwan Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Chicken Schezwan Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Schezwan Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Schezwan Fried Rice", 485)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Chicken Hong Kong Fried Rice</h3>
+        <span class='price'>₹485</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Hong Kong Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Chicken Hong Kong Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Hong Kong Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Hong Kong Fried Rice", 485)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Chicken Triple Schezwan Fried Rice</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Triple Schezwan Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Chicken Triple Schezwan Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Triple Schezwan Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Triple Schezwan Fried Rice", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Chicken Thai Red Fried Rice</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Thai Red Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Chicken Thai Red Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Thai Red Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Thai Red Fried Rice", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Chicken Thai Green Fried Rice</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Thai Green Fried Rice", -1)'>-</button>
+          <span id='menu-qty-Chicken Thai Green Fried Rice'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Thai Green Fried Rice", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Thai Green Fried Rice", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-fried-rice'>
+      <div class='menu-card-header'>
+        <h3>Mixed Fried Rice (Egg, Chicken & Prawns)</h3>
+        <span class='price'>₹605</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Mixed Fried Rice (Egg, Chicken & Prawns)", -1)'>-</button>
+          <span id='menu-qty-Mixed Fried Rice (Egg, Chicken & Prawns)'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Mixed Fried Rice (Egg, Chicken & Prawns)", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Mixed Fried Rice (Egg, Chicken & Prawns)", 605)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- NON-VEG NOODLES -->
+<div id='non-veg-noodles-menu-section' class='menu-tier-section' style='margin-bottom: 4rem;'>
+  <div class='section-header' style='margin-bottom: 2.5rem;'>
+    <h2 style='font-size: 2rem;'>NON-VEG NOODLES</h2>
+    <div class='gold-divider' style='width: 60px;'></div>
+  </div>
+  <div class='menu-grid'>
+    <div class='menu-card' data-category='non-veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Egg Hakka Noodles</h3>
+        <span class='price'>₹330</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Egg Hakka Noodles", -1)'>-</button>
+          <span id='menu-qty-Egg Hakka Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Egg Hakka Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Egg Hakka Noodles", 330)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Chicken Hakka Noodles</h3>
+        <span class='price'>₹475</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Hakka Noodles", -1)'>-</button>
+          <span id='menu-qty-Chicken Hakka Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Hakka Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Hakka Noodles", 475)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Chicken Schezwan Noodles</h3>
+        <span class='price'>₹485</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Schezwan Noodles", -1)'>-</button>
+          <span id='menu-qty-Chicken Schezwan Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Schezwan Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Schezwan Noodles", 485)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Chicken Hong Kong Noodles</h3>
+        <span class='price'>₹485</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Hong Kong Noodles", -1)'>-</button>
+          <span id='menu-qty-Chicken Hong Kong Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Hong Kong Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Hong Kong Noodles", 485)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Chicken Triple Schezwan Fried Noodles</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Triple Schezwan Fried Noodles", -1)'>-</button>
+          <span id='menu-qty-Chicken Triple Schezwan Fried Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Triple Schezwan Fried Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Triple Schezwan Fried Noodles", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Chicken Thai Red Noodles</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Thai Red Noodles", -1)'>-</button>
+          <span id='menu-qty-Chicken Thai Red Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Thai Red Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Thai Red Noodles", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class='menu-card' data-category='non-veg-noodles'>
+      <div class='menu-card-header'>
+        <h3>Chicken Thai Green Noodles</h3>
+        <span class='price'>₹505</span>
+      </div>
+      <div class='menu-card-actions'>
+        <div class='qty-adjuster'>
+          <button aria-label='Decrease quantity' onclick='adjustMenuQty("Chicken Thai Green Noodles", -1)'>-</button>
+          <span id='menu-qty-Chicken Thai Green Noodles'>1</span>
+          <button aria-label='Increase quantity' onclick='adjustMenuQty("Chicken Thai Green Noodles", 1)'>+</button>
+        </div>
+        <button class='add-to-cart-btn' onclick='addMenuToCart("Chicken Thai Green Noodles", 505)'>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+    <!-- Luxurious Grand Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4 class="brand-logo" style="margin-top: 0; margin-bottom: 1.5rem;">The Coastal Tawa</h4>
+          <p class="footer-about">
+            Dive into a culinary journey of coastal delights.<br>
+            From seafood treasures to continental classics, serving unforgettable dining experiences in Thane.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Opening & Dining</h5>
+          <div class="footer-hours-block">
+            <p style="font-weight: 600; color: #fff; margin-bottom: 0.25rem;">Monday – Sunday</p>
+            <p style="margin-bottom: 0.25rem;">10:30 AM – 12:30 AM</p>
+            <p style="color: var(--accent); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.5rem; font-weight: 600; margin-bottom: 1.2rem;">
+              Open all week.
+            </p>
+          </div>
+          <div class="footer-hours-block">
+            <p style="font-weight: 600; color: #fff; margin-bottom: 0.25rem;">Dining Information</p>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--muted);">
+              Casual Dining & Family Restaurant.<br>Reservations are recommended for dinners and weekend feasts.
+            </p>
+          </div>
+        </div>
+        <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+          <h5>Contact & Location</h5>
+          <a href="https://maps.google.com/?q=Ground+Floor,+Empire+Ways+Co+Operative+Housing+Society,+Junction,+Eastern+Express+Highway,+Near+Nitin+Company,+Sambhaji+Nagar,+Thane+West,+Thane,+Maharashtra+400604" target="_blank" rel="noopener noreferrer" class="footer-address-link" title="Open in Google Maps" style="margin-bottom: 1.2rem;">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span class="footer-address-text" style="line-height: 1.6;">
+              Ground Floor, Empire Ways Co Operative Housing Society,<br>
+              Junction, Eastern Express Highway,<br>
+              Near Nitin Company, Sambhaji Nagar,<br>
+              Thane West, Thane,<br>
+              Maharashtra 400604
+            </span>
+          </a>
+          <a href="tel:09920243728" class="footer-contact-link" title="Call Us" style="margin-bottom: 1.2rem;">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <span style="font-weight: 600;">09920243728</span>
+          </a>
+          <a href="https://instagram.com/thecoastaltawa" target="_blank" rel="noopener noreferrer" class="footer-contact-link" title="Follow us on Instagram">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            <span style="font-weight: 600;">@thecoastaltawa</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 The Coastal Tawa. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Synced Cart, Payments, and Stepper overlays -->
+    <div id="cart-drawer" class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h2>Your Cart</h2>
+        <button class="close-drawer-btn" onclick="toggleCartDrawer(false)">
+          &times;
+        </button>
+      </div>
+      <div class="cart-drawer-content">
+        <div id="cart-items-list" class="cart-items-list"></div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">₹ 0</span>
+          </div>
+          <div class="summary-row">
+            <span>CGST + SGST (10%)</span>
+            <span id="cart-tax">₹ 0</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total Due</span>
+            <span id="cart-total">₹ 0</span>
+          </div>
+          <button
+            class="button button-primary checkout-btn"
+            id="proceed-checkout-btn"
+            onclick="openCheckoutModal()"
+            disabled
+          >
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="cart-drawer-backdrop"
+      class="drawer-backdrop"
+      onclick="toggleCartDrawer(false)"
+    ></div>
+
+    <div id="checkout-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal-btn" onclick="closeCheckoutModal()">
+          &times;
+        </button>
+        <h2>Order Settlement</h2>
+        <div class="gold-divider"></div>
+        <div class="modal-body">
+          <div class="checkout-summary-box">
+            <h3>Summary Ledger</h3>
+            <div class="summary-row">
+              <span>Delicacies Count</span>
+              <span id="checkout-count">0 Items</span>
+            </div>
+            <div class="summary-row total-row">
+              <span>Amount Due</span>
+              <span id="checkout-total-price">₹ 0</span>
+            </div>
+          </div>
+          <form
+            id="payment-form"
+            class="payment-form"
+            onsubmit="processPayment(event)"
+          >
+            <div class="payment-methods">
+              <button
+                type="button"
+                class="payment-method-btn active"
+                id="pay-method-card"
+                onclick="togglePaymentFields('card')"
+              >
+                Premium Credit Card
+              </button>
+              <button
+                type="button"
+                class="payment-method-btn"
+                id="pay-method-upi"
+                onclick="togglePaymentFields('upi')"
+              >
+                UPI Payment
+              </button>
+            </div>
+            <div id="card-fields" class="form-fields-group">
+              <div class="form-group">
+                <label for="card-num">Card Number</label>
+                <input
+                  type="text"
+                  id="card-num"
+                  placeholder="4111 2222 3333 4444"
+                  pattern="\d{16}"
+                  minlength="16"
+                  maxlength="16"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="card-expiry">Expiry Date</label>
+                  <input
+                    type="text"
+                    id="card-expiry"
+                    placeholder="MM/YY"
+                    pattern="\d{2}/\d{2}"
+                    minlength="5"
+                    maxlength="5"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="card-cvv">CVV</label>
+                  <input
+                    type="password"
+                    id="card-cvv"
+                    placeholder="***"
+                    pattern="\d{3}"
+                    minlength="3"
+                    maxlength="3"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div id="upi-fields" class="form-fields-group hidden">
+              <div class="form-group">
+                <label for="upi-id">UPI Address</label>
+                <input type="text" id="upi-id" placeholder="username@upi" />
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="button button-primary submit-btn"
+              id="pay-now-btn"
+            >
+              Complete Order Settlement
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      id="checkout-modal-backdrop"
+      class="modal-backdrop"
+      onclick="closeCheckoutModal()"
+    ></div>
+
+    <div id="tracking-modal" class="modal">
+      <div class="modal-content tracking-content">
+        <button class="close-modal-btn" onclick="closeTrackingModal()">
+          &times;
+        </button>
+        <h2>Delivery Tracker</h2>
+        <div class="gold-divider"></div>
+        <div class="tracking-body">
+          <div class="tracking-status-badge">
+            <span id="tracking-status-text"
+              >Your order is being anchored...</span
+            >
+          </div>
+          <div class="timer-box">
+            <div class="timer-title">Estimated Feast Arrival</div>
+            <div class="timer-countdown" id="tracking-timer">25:00</div>
+          </div>
+          <div class="stepper">
+            <div class="step active" id="step-1">
+              <div class="step-num">✓</div>
+              <div class="step-label">Order Anchored</div>
+            </div>
+            <div class="step" id="step-2">
+              <div class="step-num">2</div>
+              <div class="step-label">Premium Kitchen Prep</div>
+            </div>
+            <div class="step" id="step-3">
+              <div class="step-num">3</div>
+              <div class="step-label">Delivery Partner Dispatch</div>
+            </div>
+            <div class="step" id="step-4">
+              <div class="step-num">4</div>
+              <div class="step-label">Arrived at Palace</div>
+            </div>
+          </div>
+          <button
+            class="button button-secondary"
+            onclick="closeTrackingModal()"
+            style="margin-top: 2rem; width: 100%"
+          >
+            Acknowledge & Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="tracking-modal-backdrop"
+      class="modal-backdrop"
+      onclick="closeTrackingModal()"
+    ></div>
+
+    <script src="script.js?v=1.0.2"></script>
+  </body>
+</html>
